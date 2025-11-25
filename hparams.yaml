@@ -1,0 +1,191 @@
+L_embed: 128
+args: !!python/object:argparse.Namespace
+  L_embed: 128
+  accelerator: null
+  accumulate_grad_batches: 1
+  amp_backend: native
+  amp_level: O2
+  args: !!python/object:argparse.Namespace
+    L_embed: 128
+    accelerator: null
+    accumulate_grad_batches: 1
+    amp_backend: native
+    amp_level: O2
+    auto_lr_find: false
+    auto_scale_batch_size: false
+    auto_select_gpus: false
+    batch_size: 4
+    benchmark: false
+    check_val_every_n_epoch: 1
+    checkpoint_callback: true
+    data_path_cont: /dataset/galaxy10/eht_cont_200im_Galaxy10_DECals_full.h5
+    data_path_imgs: /dataset/galaxy10/Galaxy10_DECals.h5
+    dataset: Galaxy10_DECals
+    dataset_path: /dataset/galaxy10/eht_grid_128FC_200im_Galaxy10_DECals_full.h5
+    default_root_dir: ./logs/Galaxy10-DEC-cont/transformer/mlp_8_layer/image_loss-NF_128
+    deterministic: false
+    devices: null
+    distributed_backend: null
+    exp_name: Galaxy10-DEC-cont/transformer/mlp_8_layer/image_loss-NF_128
+    fast_dev_run: false
+    flush_logs_every_n_steps: 100
+    gpus: null
+    gradient_clip_algorithm: norm
+    gradient_clip_val: 0.0
+    input_encoding: fourier
+    input_size: 256
+    ipus: null
+    learning_rate: 0.0001
+    limit_predict_batches: 1.0
+    limit_test_batches: 1.0
+    limit_train_batches: 1.0
+    limit_val_batches: 1.0
+    log_every_n_steps: 50
+    log_gpu_memory: null
+    logger: true
+    loss_type: image
+    m_epochs: 100
+    max_epochs: null
+    max_steps: null
+    max_time: null
+    min_epochs: null
+    min_steps: null
+    mlp_hidden_dim: 256
+    mlp_layers: 8
+    model_checkpoint: ''
+    move_metrics_to_cpu: false
+    multiple_trainloader_mode: max_size_cycle
+    num_fourier: 128
+    num_nodes: 1
+    num_processes: 1
+    num_sanity_val_steps: 2
+    num_workers: 8
+    overfit_batches: 0.0
+    plugins: null
+    precision: 32
+    prepare_data_per_node: true
+    process_position: 0
+    profiler: null
+    progress_bar_refresh_rate: null
+    reload_dataloaders_every_epoch: false
+    reload_dataloaders_every_n_epochs: 0
+    replace_sampler_ddp: true
+    resume_from_checkpoint: null
+    scale_loss_image: 1.0
+    sigma: 5.0
+    stochastic_weight_avg: false
+    sync_batchnorm: false
+    terminate_on_nan: false
+    tpu_cores: null
+    track_grad_norm: -1
+    truncated_bptt_steps: null
+    val_check_interval: 1.0
+    val_fldr: ./logs/Galaxy10-DEC-cont/transformer/mlp_8_layer/image_loss-NF_128
+    weights_save_path: null
+    weights_summary: top
+  auto_lr_find: false
+  auto_scale_batch_size: false
+  auto_select_gpus: false
+  batch_size: 4
+  benchmark: false
+  check_val_every_n_epoch: 1
+  checkpoint_callback: true
+  data_path_cont: ../data/eht_cont_200im_Galaxy10_DECals_full.h5
+  data_path_imgs: ../data/Galaxy10_DECals.h5
+  dataset: Galaxy10_DECals
+  dataset_path: ../data/eht_grid_128FC_200im_Galaxy10_DECals_full.h5
+  default_root_dir: null
+  deterministic: false
+  devices: null
+  distributed_backend: null
+  eval: false
+  exp_name: Galaxy10-DEC-cont/transformer/mlp_8_layer/image_loss-NF_128
+  fast_dev_run: false
+  flush_logs_every_n_steps: 100
+  gpus: null
+  gradient_clip_algorithm: norm
+  gradient_clip_val: 0.0
+  hidden_dims:
+  - 256
+  - 256
+  - 256
+  - 256
+  - 256
+  - 256
+  - 256
+  input_encoding: fourier
+  input_size: 256
+  ipus: null
+  kl_coeff: 100.0
+  latent_dim: 1024
+  learning_rate: 0.0001
+  limit_predict_batches: 1.0
+  limit_test_batches: 1.0
+  limit_train_batches: 1.0
+  limit_val_batches: 1.0
+  log_every_n_steps: 50
+  log_gpu_memory: null
+  logger: true
+  loss_type: spectral
+  m_epochs: 200
+  max_epochs: null
+  max_steps: null
+  max_time: null
+  min_epochs: null
+  min_steps: null
+  mlp_hidden_dim: 256
+  mlp_layers: 8
+  model_checkpoint: ''
+  move_metrics_to_cpu: false
+  multiple_trainloader_mode: max_size_cycle
+  ngpu: 8
+  ngpus:
+  - 0
+  num_fourier: 128
+  num_fourier_coeff: 128
+  num_nodes: 1
+  num_processes: 1
+  num_sanity_val_steps: 2
+  num_workers: 16
+  overfit_batches: 0.0
+  plugins: null
+  precision: 32
+  prepare_data_per_node: true
+  process_position: 0
+  profiler: null
+  progress_bar_refresh_rate: null
+  reload_dataloaders_every_epoch: false
+  reload_dataloaders_every_n_epochs: 0
+  replace_sampler_ddp: true
+  resume_from_checkpoint: null
+  scale_loss_image: 1.0
+  sigma: 5.0
+  stochastic_weight_avg: false
+  sync_batchnorm: false
+  terminate_on_nan: false
+  tpu_cores: null
+  track_grad_norm: -1
+  truncated_bptt_steps: null
+  val_check_interval: 1.0
+  val_fldr: ./val_fldr-test
+  weights_save_path: null
+  weights_summary: top
+  yaml_file: ../data/Galaxy10-DEC-cont/transformer/mlp_8_layer/image_loss-NF_128/hparams.yaml
+batch_size: 32
+hidden_dims:
+- 256
+- 256
+- 256
+- 256
+- 256
+- 256
+- 256
+input_encoding: fourier
+input_size: 256
+kl_coeff: 100.0
+latent_dim: 1024
+learning_rate: 0.0001
+model_checkpoint: ''
+ngpu: 2
+num_fourier_coeff: 128
+sigma: 5.0
